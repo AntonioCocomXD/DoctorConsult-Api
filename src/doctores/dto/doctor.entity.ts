@@ -9,8 +9,14 @@ export class Doctor {
   nombre: string;
 
   @Column('text')
+  telefono: string;
+
+  @Column('text')
   especialidad: string;
 
   @Column('text')
   horario_trabajo: string;
+
+  @Column('text')
+  foto: string;
 }

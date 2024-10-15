@@ -6,6 +6,10 @@ export class CreateDoctorDto {
   @IsString()
   nombre: string;
 
+  @ApiProperty({ description: 'Telefono' })
+  @IsString()
+  telefono: string;
+
   @ApiProperty({ description: 'Especialidad del doctor' })
   @IsString()
   especialidad: string;
@@ -13,6 +17,10 @@ export class CreateDoctorDto {
   @ApiProperty({ description: 'Horario de trabajo del doctor' })
   @IsString()
   horario_trabajo: string;
+
+  @ApiProperty({ description: 'foto'})
+  @IsString()
+  foto: string;
 }
 
 export class UpdateDoctorDto {
@@ -20,6 +28,11 @@ export class UpdateDoctorDto {
   @IsOptional()
   @IsString()
   nombre?: string;
+
+  @ApiProperty({ description: 'Telefono', required: false })
+  @IsOptional()
+  @IsString()
+  telefono?: string;
 
   @ApiProperty({ description: 'Especialidad del doctor', required: false })
   @IsOptional()
@@ -33,4 +46,10 @@ export class UpdateDoctorDto {
   @IsOptional()
   @IsString()
   horario_trabajo?: string;
+
+  @ApiProperty({ description: 'foto'})
+  @IsOptional()
+  @IsString()
+  foto: string;
+
 }
