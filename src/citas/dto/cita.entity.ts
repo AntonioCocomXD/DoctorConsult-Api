@@ -7,17 +7,18 @@ export class Cita {
   @PrimaryGeneratedColumn('increment')
   id: number;
 
-  @ManyToOne(() => Usuario)
-  @JoinColumn({ name: 'usuario_id' })
-  usuario: Usuario;
+  @Column('int')
+  usuario_id: number;
 
-  @ManyToOne(() => Doctor)
-  @JoinColumn({ name: 'doctor_id' })
-  doctor: Doctor;
+  @Column('int')
+  doctor_id: number;
 
   @Column('timestamp')
   fecha_hora: Date;
 
   @Column('text')
   estado: string;
+
+  @Column('text')
+  asunto: String;
 }

@@ -17,6 +17,10 @@ export class CreateCitaDto {
   @ApiProperty({ description: 'Estado de la cita' })
   @IsString()
   estado: string;
+
+  @ApiProperty({ description: 'Asunto de la cita' })
+  @IsString()
+  asunto: string;
 }
 
 export class UpdateCitaDto {
@@ -35,4 +39,8 @@ export class UpdateCitaDto {
   @ApiProperty({ description: 'Estado de la cita', required: false })
   @IsString()
   estado?: string;
+
+  @ApiProperty({ description: 'Asunto de la cita', required: false })
+  @IsString()
+  asunto?: string;
 }
